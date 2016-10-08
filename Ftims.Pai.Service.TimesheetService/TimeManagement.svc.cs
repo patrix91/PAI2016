@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Ftims.Pai.Service.DTO;
 using Ftims.Pai.Service.Services;
+using Ftims.Pai.Service.Infrastructure;
 
 namespace Ftims.Pai.Service
 {
@@ -16,7 +17,14 @@ namespace Ftims.Pai.Service
 
         public Timesheet AcceptTimesheet(string id, CreateAudit createAudit)
         {
-            throw new NotImplementedException();
+            int timesheetId;
+            bool correctFormat = int.TryParse(id, out timesheetId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Timesheet();
         }
 
         public List<Employee> AddSubordinate(string employeeId, string subordinateId)
@@ -46,27 +54,67 @@ namespace Ftims.Pai.Service
 
         public void DeleteEmployee(string id)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return;
+            }
+          
         }
 
         public void DeleteProject(string id)
         {
-            throw new NotImplementedException();
+            int projectId;
+            bool correctFormat = int.TryParse(id, out projectId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return;
+            }
         }
 
         public List<Employee> DeleteSubordinate(string employeeId, string subordinateId)
         {
-            throw new NotImplementedException();
+            int employeeID;
+            bool correctFormat = int.TryParse(employeeId, out employeeID);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            int subortinateID;
+             correctFormat = int.TryParse(subordinateId, out subortinateID);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new List<Employee>();
         }
 
         public void DeleteTask(string id)
         {
-            throw new NotImplementedException();
+            int taskId;
+            bool correctFormat = int.TryParse(id, out taskId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return;
+            }
         }
 
         public Employee GetEmployee(string id)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id,out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Employee(employeeId, "Name " + employeeId, "Lastname " + employeeId, "email");
         }
 
         public List<Employee> GetEmployees()
@@ -76,22 +124,64 @@ namespace Ftims.Pai.Service
 
         public List<Employee> GetEmployeeSubordinates(string id)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new List<Employee>();
         }
 
         public List<Timesheet> GetEmployeeTimesheetsForPeriod(string id, string start, string end)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            DateTime startDate;
+            correctFormat = DateTime.TryParse(start, out startDate);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of date");
+                return null;
+            }
+            DateTime endDate;
+            correctFormat = DateTime.TryParse(start, out endDate);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of date");
+                return null;
+            }
+            return new List<Timesheet>();
         }
 
         public List<Project> GetManagedProjects(string id)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new List<Project>();
         }
 
         public Project GetProject(string id)
         {
-            throw new NotImplementedException();
+            int projectId;
+            bool correctFormat = int.TryParse(id, out projectId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Project(projectId, "Code" + projectId, "Nanme" + projectId);
         }
 
         public List<Project> GetProjects()
@@ -101,12 +191,40 @@ namespace Ftims.Pai.Service
 
         public List<Timesheet> GetProjectTimesheetsForPeriod(string id, string start, string end)
         {
-            throw new NotImplementedException();
+            int projectId;
+            bool correctFormat = int.TryParse(id, out projectId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            DateTime startDate;
+            correctFormat = DateTime.TryParse(start, out startDate);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of date");
+                return null;
+            }
+            DateTime endDate;
+            correctFormat = DateTime.TryParse(start, out endDate);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of date");
+                return null;
+            }
+            return new List<Timesheet>();
         }
 
         public Task GetTask(string id)
         {
-            throw new NotImplementedException();
+            int taskId;
+            bool correctFormat = int.TryParse(id, out taskId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Task(taskId, "Code" + taskId, "Nanme" + taskId);
         }
 
         public List<Task> GetTasks()
@@ -116,12 +234,26 @@ namespace Ftims.Pai.Service
 
         public Timesheet GetTimesheet(string id)
         {
-            throw new NotImplementedException();
+            int timesheetId;
+            bool correctFormat = int.TryParse(id, out timesheetId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Timesheet();
         }
 
         public List<Audit> GetTimesheetHistory(string id)
         {
-            throw new NotImplementedException();
+            int timesheetId;
+            bool correctFormat = int.TryParse(id, out timesheetId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new List<Audit>();
         }
 
         public List<Timesheet> GetTimesheets()
@@ -131,7 +263,14 @@ namespace Ftims.Pai.Service
 
         public List<Timesheet> GetTimesheetsNeedAction(string id)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new List<Timesheet>();
         }
 
         public List<Project> QueryForProjects(string query)
@@ -146,27 +285,70 @@ namespace Ftims.Pai.Service
 
         public Timesheet RejectTimesheet(string id, CreateAudit createAudit)
         {
-            throw new NotImplementedException();
+            int timesheetId;
+            bool correctFormat = int.TryParse(id, out timesheetId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+
+            return new Timesheet();
         }
 
-        public Project SetProjectManager(string projectId, string employeeId)
+        public void SetProjectManager(string projectId, string employeeId)
         {
-            throw new NotImplementedException();
+            int projectID;
+            bool correctFormat = int.TryParse(projectId, out projectID);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return;
+            }
+            int employeeID;
+            correctFormat = int.TryParse(employeeId, out employeeID);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return;
+            }
+            
         }
 
-        public Employee UpdateEmployee(string id, Employee project)
+        public Employee UpdateEmployee(string id, Employee employee)
         {
-            throw new NotImplementedException();
+            int employeeId;
+            bool correctFormat = int.TryParse(id, out employeeId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Employee(employeeId, "Name " + employeeId, "Lastname " + employeeId, "email");
         }
 
         public Project UpdateProject(string id, Project project)
         {
-            throw new NotImplementedException();
+            int projectId;
+            bool correctFormat = int.TryParse(id, out projectId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Project(projectId, "Code" + projectId, "Name" + projectId);
         }
 
         public Task UpdateTask(string id, Task project)
         {
-            throw new NotImplementedException();
+            int taskId;
+            bool correctFormat = int.TryParse(id, out taskId);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return new Task(taskId, "Code" + taskId, "Name" + taskId);
         }
     }
 }

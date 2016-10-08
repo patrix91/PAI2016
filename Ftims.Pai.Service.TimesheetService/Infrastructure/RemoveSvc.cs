@@ -7,7 +7,6 @@ namespace Ftims.Pai.Service.Infrastructure
     {
         public void Dispose()
         {
-            throw new NotImplementedException();
         }
 
         public void Init(HttpApplication context)

@@ -46,7 +46,7 @@ namespace Ftims.Pai.Service
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare,Method ="PUT", UriTemplate = "/project/{projectId}/manager/{employeeId}")]
         [Description("Sets manager of specified project")]
-        Project SetProjectManager(string projectId, string employeeId);
+        void SetProjectManager(string projectId, string employeeId);
         #endregion ProjectMethods
         #region TaskMethods
         [OperationContract]

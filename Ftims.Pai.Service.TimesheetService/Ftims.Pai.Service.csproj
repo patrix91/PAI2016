@@ -122,6 +122,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Infrastructure\ErrorResponses.cs" />
     <Compile Include="Infrastructure\RemoveSvc.cs" />
     <Compile Include="Infrastructure\WindsorInstaller.cs" />
     <Compile Include="ITimeManagement.cs" />

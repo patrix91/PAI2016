@@ -3,7 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Ftims.Pai.Service.DAL;
-using Ftims.Pai.Service.BLL;
+using Ftims.Pai.Service.Services;
 
 namespace Ftims.Pai.Service.Infrastructure
 {
@@ -12,14 +12,9 @@ namespace Ftims.Pai.Service.Infrastructure
         public void Install(IWindsorContainer container, IConfigurationStore store)
         {
             container.Register(
-                Component.For<IProjectService,ProjectService>(),
-                Component.For<ITimesheetService,TimesheetService>(),
-                Component.For<IEmployeeService,EmployeeService>(),
-                Component.For<ITaskService,TaskService>(),
-                Component.For<IProjectBLL>(),
-                Component.For<ITaskBLL>(),
-                Component.For<IEmployeeBLL>(),
-                Component.For<IUnitOfWork,EfUnitOfWork>()
+                           Component.For<IUnitOfWork,EfUnitOfWork>(),
+                           Component.For<ITimeManagement, TimeManagement>(),
+                           Component.For<ITimeManagementService, TimeManagementService>()
                 );
         }
     }

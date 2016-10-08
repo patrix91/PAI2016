@@ -2,6 +2,8 @@
 using Castle.Windsor;
 using Ftims.Pai.Service.Infrastructure;
 using System;
+using System.ServiceModel.Activation;
+using System.Web.Routing;
 
 namespace Ftims.Pai.Service
 {
@@ -15,6 +17,8 @@ namespace Ftims.Pai.Service
             container.AddFacility<WcfFacility>();
             container.Install(new WindsorInstaller());
         }
+
+ 
 
         protected void Session_Start(object sender, EventArgs e)
         {

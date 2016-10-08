@@ -1,3 +1,0 @@
-﻿<%@ ServiceHost Language="C#" Debug="true" Service="Ftims.Pai.Service.EmployeeService" 
-    CodeBehind="EmployeeService.svc.cs" 
-    Factory="Castle.Facilities.WcfIntegration.DefaultServiceHostFactory, Castle.Facilities.WcfIntegration" %>

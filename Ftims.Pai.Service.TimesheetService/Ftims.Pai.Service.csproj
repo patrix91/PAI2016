@@ -87,24 +87,18 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="EmployeeService.svc" />
-    <Content Include="TaskService.svc" />
-    <Content Include="ProjectService.svc">
-      <BrowseToURL>~/project</BrowseToURL>
-    </Content>
-    <Content Include="TimesheetService.svc" />
+    <Content Include="TimeManagement.svc" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BLL\IEmployeeBLL.cs" />
-    <Compile Include="BLL\IProjectBLL.cs" />
-    <Compile Include="BLL\ITaskBLL.cs" />
     <Compile Include="DAL\EfGenericRepository.cs" />
     <Compile Include="DAL\IGenericRepository.cs" />
     <Compile Include="DAL\IUnitOfWork.cs" />
     <Compile Include="DAL\EfUnitOfWork.cs" />
+    <Compile Include="DTO\Audit.cs" />
+    <Compile Include="DTO\CreateAudit.cs" />
     <Compile Include="DTO\CreateEmployee.cs" />
     <Compile Include="DTO\CreateProject.cs" />
     <Compile Include="DTO\CreateTask.cs" />
@@ -128,23 +122,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="EmployeeService.svc.cs">
-      <DependentUpon>EmployeeService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="Services\IEmployeeService.cs" />
-    <Compile Include="Services\ITaskService.cs" />
+    <Compile Include="Infrastructure\RemoveSvc.cs" />
     <Compile Include="Infrastructure\WindsorInstaller.cs" />
-    <Compile Include="Services\IProjectService.cs" />
-    <Compile Include="Services\ITimesheetService.cs" />
-    <Compile Include="TaskService.svc.cs">
-      <DependentUpon>TaskService.svc</DependentUpon>
-    </Compile>
-    <Compile Include="ProjectService.svc.cs">
-      <DependentUpon>ProjectService.svc</DependentUpon>
-    </Compile>
+    <Compile Include="ITimeManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TimesheetService.svc.cs">
-      <DependentUpon>TimesheetService.svc</DependentUpon>
+    <Compile Include="Services\ITimeManagementService.cs" />
+    <Compile Include="Services\TimeManagementService.cs" />
+    <Compile Include="TimeManagement.svc.cs">
+      <DependentUpon>TimeManagement.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -152,7 +137,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="ClassDiagram1.cd" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -2,10 +2,7 @@
 {
     public enum TimesheetStatus
     {
-        Draft,
         Submitted,
-        Edited,
-        Withdrawn,
         Accepted,
         Rejected
     }

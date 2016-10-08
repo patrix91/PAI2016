@@ -1,4 +1,4 @@
-﻿using Ftims.Pai.Service.TimesheetService.Entity;
+﻿using Ftims.Pai.Service.Entity;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;

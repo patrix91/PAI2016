@@ -7,11 +7,15 @@ namespace Ftims.Pai.Service{
     // NOTE: In order to launch WCF Test Client for testing this service, please select EmployeeService.svc or EmployeeService.svc.cs at the Solution Explorer and start debugging.
     public class EmployeeService : IEmployeeService
     {
-        private IEmployeeBLL _employeeBll;
+        //private IEmployeeBLL _employeeBll;
 
-        public EmployeeService(IEmployeeBLL employeeBll)
+       /* public EmployeeService(IEmployeeBLL employeeBll)
         {
-            _employeeBll = employeeBll;
+           // _employeeBll = employeeBll;
+        }*/
+        public EmployeeService()
+        {
+
         }
 
         public Employee Create(CreateEmployee task)
@@ -34,7 +38,7 @@ namespace Ftims.Pai.Service{
             throw new NotImplementedException();
         }
 
-        public Employee GetDetails(string id)
+        public EmployeeWithDetails GetDetails(string id)
         {
             throw new NotImplementedException();
         }

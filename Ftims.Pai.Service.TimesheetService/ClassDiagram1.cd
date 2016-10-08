@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Ftims.Pai.Service.DAL.EfGenericRepository&lt;T&gt;" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAgAAAAQAAAAAAJACAAIEIAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>DAL\EfGenericRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.DAL.EfUnitOfWork" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAEEAAoIAAAAAAAAQAAAAICYAAAABkRiAIAEAAAQA=</HashCode>
+      <FileName>DAL\EfUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.CreateEmployee" Collapsed="true">
+    <Position X="7.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>DTO\CreateEmployee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.CreateProject" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAoAAQAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DTO\CreateProject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.CreateTask" Collapsed="true">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\CreateTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.CreateTimesheet" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\CreateTimesheet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.Employee" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>DTO\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.EmployeeWithDetails" Collapsed="true">
+    <Position X="3.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\EmployeeWithDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.Project" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Project.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.ProjectWithDetails" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAQAAAAAAAAA=</HashCode>
+      <FileName>DTO\ProjectWithDetails.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.Task" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Task.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.DTO.Timesheet" Collapsed="true">
+    <Position X="11.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DTO\Timesheet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.EmployeeService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAABAABAAAAAAAAAAAEBAEEAAgAAAAAAAAA=</HashCode>
+      <FileName>EmployeeService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.Global" Collapsed="true">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAAAAAAAAACAAAAEAAAAAAAAAAECIBQAAAAAAAAA=</HashCode>
+      <FileName>Global.asax.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.ProjectService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="9.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAIAAAAAEIAEEAAgAAAAAAAAA=</HashCode>
+      <FileName>ProjectService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.TaskService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEIAEAAAgAIAAAAAAA=</HashCode>
+      <FileName>TaskService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.TimesheetService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>TimesheetService.svc.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.Audit" Collapsed="true">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEACAAAAAABAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAA=</HashCode>
+      <FileName>Entity\Audit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.Day" Collapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAgBACAEAAAAAAA=</HashCode>
+      <FileName>Entity\Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.Employee" Collapsed="true">
+    <Position X="11.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACEAAAICAAAAAAAAAAAAQIAAAAhAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Entity\Employee.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.Project" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAACAAAAAAAAACAAAAAgAAQAAAAAAAAABQAAAAAAAAA=</HashCode>
+      <FileName>Entity\Project.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.ProjectTask" Collapsed="true">
+    <Position X="11.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAACAAAAAgAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\ProjectTask.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.TimeEntry" Collapsed="true">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAAQAAAAAAAACAAAAAAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Entity\TimeEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Entity.Timesheet" Collapsed="true">
+    <Position X="9.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAEAAAAAAAAAAAAAACAAAAQAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Timesheet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ftims.Pai.Service.Infrastructure.WindsorInstaller" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Infrastructure\WindsorInstaller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Interface Name="Ftims.Pai.Service.BLL.IEmployeeBLL" Collapsed="true">
+    <Position X="6" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IEmployeeBLL.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.BLL.IProjectBLL" Collapsed="true">
+    <Position X="13" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\IProjectBLL.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.BLL.ITaskBLL" Collapsed="true">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BLL\ITaskBLL.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.DAL.IGenericRepository&lt;T&gt;" Collapsed="true">
+    <Position X="11.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAgAAAAQAAAAAABACAAIEIAAAAAgAAAAAAAIA=</HashCode>
+      <FileName>DAL\IGenericRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.DAL.IUnitOfWork" Collapsed="true">
+    <Position X="13" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAAIAAAAAAAAAQAAAAAAQAAAAAgBAAAAEAAAAA=</HashCode>
+      <FileName>DAL\IUnitOfWork.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.IEmployeeService" Collapsed="true">
+    <Position X="7.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAABAABAAAAAAAAAAAEBAEEAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\IEmployeeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.IProjectService" Collapsed="true">
+    <Position X="6" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEIAEEAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\IProjectService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.ITaskService" Collapsed="true">
+    <Position X="9.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEIAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\ITaskService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.ITimesheetService" Collapsed="true">
+    <Position X="11.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAABAAAAAAAAAAAEAAEAAAgAAAAAAAAA=</HashCode>
+      <FileName>Services\ITimesheetService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Ftims.Pai.Service.Entity.IEntity&lt;T&gt;" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Entity\IEntity.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Ftims.Pai.Service.Entity.ProjectType" Collapsed="true">
+    <Position X="6" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\ProjectType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Ftims.Pai.Service.Entity.TimesheetStatus" Collapsed="true">
+    <Position X="7.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAQAAEAAAAAAACAEAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\TimesheetStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

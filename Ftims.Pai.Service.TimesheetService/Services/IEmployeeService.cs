@@ -16,7 +16,7 @@ namespace Ftims.Pai.Service
         Employee[] GetSubordinates(string id);
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate = "/employee/{id}/details")]
-        Employee GetDetails(string id);
+        EmployeeWithDetails GetDetails(string id);
         [OperationContract]
         [WebInvoke(Method = "GET", ResponseFormat = WebMessageFormat.Json, UriTemplate = "/employee/")]
         Employee[] GetAll();

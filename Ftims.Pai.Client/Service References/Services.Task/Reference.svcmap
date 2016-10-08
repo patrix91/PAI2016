@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="9f01538b-3cf4-4e52-a6f6-f6b1cd7d7c6e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9002/TaskService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TaskService.wsdl" MetadataType="Wsdl" ID="5b68be55-caf5-412a-8aaa-27fd3a93a64f" SourceId="1" SourceUrl="http://localhost:9002/TaskService.svc?wsdl" />
+    <MetadataFile FileName="TaskService.disco" MetadataType="Disco" ID="ad0a3772-2ce7-4307-bb90-ab095441747e" SourceId="1" SourceUrl="http://localhost:9002/TaskService.svc?disco" />
+    <MetadataFile FileName="TaskService.xsd" MetadataType="Schema" ID="cce97e49-f291-4d6d-b07f-5f85110567ac" SourceId="1" SourceUrl="http://localhost:9002/TaskService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TaskService1.xsd" MetadataType="Schema" ID="87bd69c2-d932-4eba-ad2e-72f1fa624503" SourceId="1" SourceUrl="http://localhost:9002/TaskService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TaskService2.xsd" MetadataType="Schema" ID="7711985a-8bcb-472a-a104-4b8189774caa" SourceId="1" SourceUrl="http://localhost:9002/TaskService.svc?xsd=xsd1" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8b651a5b-fd23-4b0e-8a22-7c69ea41dce7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:9002/TimesheetService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="TimesheetService.xsd" MetadataType="Schema" ID="2836a948-04eb-4094-bb50-ffe73de79e9b" SourceId="1" SourceUrl="http://localhost:9002/TimesheetService.svc?xsd=xsd0" />
+    <MetadataFile FileName="TimesheetService1.xsd" MetadataType="Schema" ID="74bfb846-7b8b-4e5b-9503-df22bb9b3583" SourceId="1" SourceUrl="http://localhost:9002/TimesheetService.svc?xsd=xsd2" />
+    <MetadataFile FileName="TimesheetService2.xsd" MetadataType="Schema" ID="351da611-082a-4a91-b109-6aae34dd1bc9" SourceId="1" SourceUrl="http://localhost:9002/TimesheetService.svc?xsd=xsd1" />
+    <MetadataFile FileName="TimesheetService.wsdl" MetadataType="Wsdl" ID="740b42ad-d51d-4a29-a227-dfddee10aabd" SourceId="1" SourceUrl="http://localhost:9002/TimesheetService.svc?wsdl" />
+    <MetadataFile FileName="TimesheetService.disco" MetadataType="Disco" ID="5b9d864f-273d-4f71-bc38-9b5c770d2d6e" SourceId="1" SourceUrl="http://localhost:9002/TimesheetService.svc?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

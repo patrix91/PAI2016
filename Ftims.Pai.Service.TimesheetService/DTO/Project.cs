@@ -11,12 +11,15 @@ namespace Ftims.Pai.Service.DTO
         public string Code { get; set; }
         [DataMember]
         public string Name { get; set; }
+        [DataMember]
+        public int Type { get; set; }
 
-        public Project(int id, string code, string name)
+        public Project(int id, string code, string name, int type)
         {
             Id = id;
             Code = code;
             Name = name;
+            Type = type;
         }
 
     }

@@ -39,7 +39,7 @@ namespace Ftims.Pai.Service
 
         public Project CreateProject(CreateProject createProject)
         {
-            throw new NotImplementedException();
+            return businessService.CreateProject(createProject);
         }
 
         public Task CreateTask(CreateTask createTask)
@@ -61,7 +61,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return;
             }
-          
+
         }
 
         public void DeleteProject(string id)
@@ -73,6 +73,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return;
             }
+            businessService.DeleteProject(projectId);
         }
 
         public List<Employee> DeleteSubordinate(string employeeId, string subordinateId)
@@ -85,7 +86,7 @@ namespace Ftims.Pai.Service
                 return null;
             }
             int subortinateID;
-             correctFormat = int.TryParse(subordinateId, out subortinateID);
+            correctFormat = int.TryParse(subordinateId, out subortinateID);
             if (!correctFormat)
             {
                 this.BadRequest("Incorrect format of id");
@@ -108,7 +109,7 @@ namespace Ftims.Pai.Service
         public Employee GetEmployee(string id)
         {
             int employeeId;
-            bool correctFormat = int.TryParse(id,out employeeId);
+            bool correctFormat = int.TryParse(id, out employeeId);
             if (!correctFormat)
             {
                 this.BadRequest("Incorrect format of id");
@@ -169,7 +170,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return null;
             }
-            return new List<Project>();
+            return businessService.ProjectsManagedBy(employeeId);
         }
 
         public Project GetProject(string id)
@@ -181,12 +182,24 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return null;
             }
-            return new Project(projectId, "Code" + projectId, "Nanme" + projectId);
+            return businessService.GetProject(projectId);
+        }
+
+        public Employee GetProjectManager(string projectId)
+        {
+            int id;
+            bool correctFormat = int.TryParse(projectId, out id);
+            if (!correctFormat)
+            {
+                this.BadRequest("Incorrect format of id");
+                return null;
+            }
+            return businessService.GetProjectManager(id);
         }
 
         public List<Project> GetProjects()
         {
-            throw new NotImplementedException();
+            return businessService.GetProjects();
         }
 
         public List<Timesheet> GetProjectTimesheetsForPeriod(string id, string start, string end)
@@ -275,7 +288,7 @@ namespace Ftims.Pai.Service
 
         public List<Project> QueryForProjects(string query)
         {
-            throw new NotImplementedException();
+            return businessService.FindProjects(query);
         }
 
         public List<Task> QueryForTaks(string query)
@@ -312,7 +325,8 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return;
             }
-            
+            businessService.SetProjectManager(projectID, employeeID);
+
         }
 
         public Employee UpdateEmployee(string id, Employee employee)
@@ -336,7 +350,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return null;
             }
-            return new Project(projectId, "Code" + projectId, "Name" + projectId);
+            return businessService.UpdateProject(projectId, project);
         }
 
         public Task UpdateTask(string id, Task project)

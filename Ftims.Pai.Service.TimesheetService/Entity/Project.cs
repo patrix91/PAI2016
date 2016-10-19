@@ -18,7 +18,7 @@ namespace Ftims.Pai.Service.Entity
 
         public DTO.Project ToDto()
         {
-            return new DTO.Project(Id, Code, Name);
+            return new DTO.Project(Id, Code, Name, (int)Type);
         }
     }
 }

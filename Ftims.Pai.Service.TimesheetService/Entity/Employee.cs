@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using Ftims.Pai.Service.DTO;
 
 namespace Ftims.Pai.Service.Entity
 {
-    public class Employee
+    public class Employee : IEntity<DTO.Employee>
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -18,5 +19,9 @@ namespace Ftims.Pai.Service.Entity
         public virtual Employee Manager { get; set; }
         public virtual List<Audit> Actions { get; set; }
 
+        public DTO.Employee ToDto()
+        {
+            return new DTO.Employee(Id, Name, LastName, Email);
+        }
     }
 }

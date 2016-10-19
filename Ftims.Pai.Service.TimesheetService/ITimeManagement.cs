@@ -15,38 +15,51 @@ namespace Ftims.Pai.Service
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/project/{id}")]
         [Description("Gets specified project")]
         Project GetProject(string id);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/project")]
         [Description("Gets list of all projects")]
         List<Project> GetProjects();
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/employee/{id}/project")]
         [Description("Gets projects managed by specified employee")]
         List<Project> GetManagedProjects(string id);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/project/{id}/timesheets?start={start}&end={end}")]
         [Description("Gets all timesheets for specified project within date range")]
         List<Timesheet> GetProjectTimesheetsForPeriod(string id, string start, string end);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/search/project?query={query}")]
         [Description("Gets all projects with code or name with specified text")]
         List<Project> QueryForProjects(string query);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/project")]
         [Description("Adds new project ")]
         Project CreateProject(CreateProject createProject);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "DELETE", UriTemplate = "/project/{id}")]
         [Description("Deletes a project")]
         void DeleteProject(string id);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "PUT", UriTemplate = "/project/{id}")]
         [Description("Updates a project")]
         Project UpdateProject(string id, Project project);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare,Method ="PUT", UriTemplate = "/project/{projectId}/manager/{employeeId}")]
         [Description("Sets manager of specified project")]
         void SetProjectManager(string projectId, string employeeId);
+
+        [OperationContract]
+        [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "PUT", UriTemplate = "/project/{projectId}/manager")]
+        [Description("Sets manager of specified project")]
+        Employee GetProjectManager(string projectId);
         #endregion ProjectMethods
         #region TaskMethods
         [OperationContract]

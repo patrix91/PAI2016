@@ -107,13 +107,13 @@
     <Compile Include="DTO\CreateProject.cs" />
     <Compile Include="DTO\CreateTask.cs" />
     <Compile Include="DTO\CreateTimesheet.cs" />
+    <Compile Include="DTO\CreateEntry.cs" />
+    <Compile Include="DTO\Entry.cs" />
     <Compile Include="DTO\Employee.cs" />
     <Compile Include="DTO\Project.cs" />
-    <Compile Include="DTO\ProjectWithDetails.cs" />
     <Compile Include="DTO\Task.cs" />
     <Compile Include="DTO\Timesheet.cs" />
     <Compile Include="Entity\Audit.cs" />
-    <Compile Include="Entity\Day.cs" />
     <Compile Include="Entity\Employee.cs" />
     <Compile Include="Entity\IEntity.cs" />
     <Compile Include="Entity\Project.cs" />

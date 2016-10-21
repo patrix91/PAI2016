@@ -1,18 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using Ftims.Pai.Service.DTO;
+using System;
 
 namespace Ftims.Pai.Service.Entity
 {
-    public class TimeEntry
+    public class TimeEntry : IEntity<Entry>
     {
         public int Id { get; set; }
+        public DateTime Date{get;set;}
         public int Hours { get; set; }
         
         public virtual Project Project { get; set; }
         public virtual ProjectTask Task { get; set; }
 
-        public virtual Day Day { get; set; }
+        public virtual Timesheet Timesheet { get; set; }
+
+        public Entry ToDto()
+        {
+            return new Entry(Id, Date, Project.Id, Task.Id, Hours);
+        }
     }
 }

@@ -10,7 +10,6 @@ namespace Ftims.Pai.Service.DAL
     public class EfUnitOfWork : DbContext, IUnitOfWork
     {
         private readonly EfGenericRepository<Timesheet> _TimesheetRepo;
-        private readonly EfGenericRepository<Day> _DayRepo;
         private readonly EfGenericRepository<TimeEntry> _TimeEntryRepo;
         private readonly EfGenericRepository<Entity.Project> _ProjectRepo;
         private readonly EfGenericRepository<ProjectTask> _TaskRepo;
@@ -18,7 +17,6 @@ namespace Ftims.Pai.Service.DAL
         private readonly EfGenericRepository<Employee> _EmployeeRepo;
 
         public DbSet<Timesheet> Timesheets { get; set; }
-        public DbSet<Day> Days { get; set; }
         public DbSet<TimeEntry> TimeEntries { get; set; }
         public DbSet<Entity.Project> Projects { get; set; }
         public DbSet<ProjectTask> Tasks { get; set; }
@@ -30,14 +28,6 @@ namespace Ftims.Pai.Service.DAL
             get
             {
                 return _TimesheetRepo;
-            }
-        }
-
-        public IGenericRepository<Day> DayRepository
-        {
-            get
-            {
-                return _DayRepo;
             }
         }
 
@@ -84,7 +74,6 @@ namespace Ftims.Pai.Service.DAL
         public EfUnitOfWork()
         {
             _TimesheetRepo = new EfGenericRepository<Timesheet>(Timesheets);
-            _DayRepo = new EfGenericRepository<Day>(Days);
             _TimeEntryRepo = new EfGenericRepository<TimeEntry>(TimeEntries);
             _ProjectRepo = new EfGenericRepository<Entity.Project>(Projects);
             _TaskRepo = new EfGenericRepository<ProjectTask>(Tasks);

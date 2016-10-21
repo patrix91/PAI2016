@@ -6,7 +6,6 @@ namespace Ftims.Pai.Service.DAL
     public interface IUnitOfWork : IDisposable
     {
         IGenericRepository<Timesheet> TimesheetRepository { get; }
-        IGenericRepository<Day> DayRepository { get; }
         IGenericRepository<TimeEntry> TimeEntryRepository { get; }
         IGenericRepository<Entity.Project> ProjectRepository { get; }
         IGenericRepository<ProjectTask> TaskRepository { get; }

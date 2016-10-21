@@ -57,69 +57,84 @@ namespace Ftims.Pai.Service
         void SetProjectManager(string projectId, string employeeId);
 
         [OperationContract]
-        [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "PUT", UriTemplate = "/project/{projectId}/manager")]
-        [Description("Sets manager of specified project")]
+        [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/project/{projectId}/manager")]
+        [Description("Gets manager of specified project")]
         Employee GetProjectManager(string projectId);
+
         #endregion ProjectMethods
         #region TaskMethods
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/task/{id}")]
         [Description("Gets specified task")]
         Task GetTask(string id);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/task")]
         [Description("Gets list of all tasks")]
         List<Task> GetTasks();
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/search/task?query={query}")]
         [Description("Gets list of all tasks containing text in code or name")]
         List<Task> QueryForTaks(string query);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/task")]
         [Description("Adds a task")]
         Task CreateTask(CreateTask createTask);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "DELETE", UriTemplate = "/task/{id}")]
         [Description("Deletes a task")]
         void DeleteTask(string id);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "PUT", UriTemplate = "/task/{id}")]
         [Description("Updates a task")]
         Task UpdateTask(string id, Task project);
+
         #endregion TaskMethods
         #region EmployeeMethods
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/employee/{id}")]
         [Description("Gets specified employee")]
         Employee GetEmployee(string id);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/employee")]
         [Description("Gets list of all employees")]
         List<Employee> GetEmployees();
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/employee/{id}/subordinate")]
         [Description("Gets list of all subordinates of employee")]
         List<Employee> GetEmployeeSubordinates(string id);
+
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/employee/{id}/timesheet?start={start}&end={end}")]
         [Description("Gets timesheet of specified employee within date range")]
         List<Timesheet> GetEmployeeTimesheetsForPeriod(string id, string start, string end);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/employee")]
         [Description("Adds an employee")]
         Employee CreateEmployee(CreateEmployee createEmployee);
+        
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "DELETE", UriTemplate = "/employee/{id}")]
         [Description("Deletes an employee")]
         void DeleteEmployee(string id);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "PUT", UriTemplate = "/employee/{id}")]
         [Description("Updates an employee")]
         Employee UpdateEmployee(string id, Employee project);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/employee/{employeeId}/subordinate/{subordinateId}")]
         [Description("Adds a subordinate for specified employee")]
         List<Employee> AddSubordinate(string employeeId, string subordinateId);
+
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "DELETE", UriTemplate = "/employee/{employeeId}/subordinate/{subordinateId}")]
         [Description("Removes a subordinate for specified employee")]

@@ -32,6 +32,12 @@ namespace Ftims.Pai.Service.Services
         List<DTO.Timesheet> GetProjectTimesheets(int projectId, DateTime start, DateTime end);
         List<DTO.Timesheet> GetEmployeeTimesheets(int employeeId, DateTime start, DateTime end);
 
+        DTO.Timesheet CreateTimesheet(DTO.CreateTimesheet task);
+        DTO.Timesheet GetTimesheet(int id);
+        List<DTO.Timesheet> GeTimesheets();
+        void DeleteTimesheet(int id);
+        DTO.Timesheet UpdateTimesheet(int id, DTO.Timesheet timesheet);
+
 
     }
 }

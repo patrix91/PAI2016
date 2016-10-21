@@ -187,12 +187,77 @@ namespace Ftims.Pai.Service.Services
 
         public List<Timesheet> GetProjectTimesheets(int projectId, DateTime start, DateTime end)
         {
-            return unitOfWork.TimesheetRepository.Find(t => t.Entries.Any(x => x.Project.Id == projectId)).Select(s=>s.ToDto()).ToList();
+            return unitOfWork.TimesheetRepository.Find(t => t.Entries.Any(x => x.Project.Id == projectId)).Select(s => s.ToDto()).ToList();
         }
 
         public List<Timesheet> GetEmployeeTimesheets(int employeeId, DateTime start, DateTime end)
         {
             return unitOfWork.TimesheetRepository.Find(t => t.Applicant.Id == employeeId).Select(s => s.ToDto()).ToList();
+        }
+
+        public Timesheet CreateTimesheet(CreateTimesheet timesheet)
+        {
+            var timesheetEntity = new Entity.Timesheet();
+            timesheetEntity.StartDay = timesheet.WeekStart;
+            timesheetEntity.EndDay = timesheet.WeekEnd;
+            timesheetEntity.Applicant = unitOfWork.EmployeeRepository.GetById(timesheet.UserId);
+            timesheetEntity.Entries = timesheet.Entries.Select(x => new Entity.TimeEntry()
+            {
+                Date = x.Date,
+                Hours = x.Hours,
+                Project = unitOfWork.ProjectRepository.GetById(x.ProjectId),
+                Task = unitOfWork.TaskRepository.GetById(x.TaskId)
+            }).ToList();
+            unitOfWork.TimesheetRepository.Add(timesheetEntity);
+            unitOfWork.Commit();
+            return timesheetEntity.ToDto();
+        }
+
+        public Timesheet GetTimesheet(int id)
+        {
+            return unitOfWork.TimesheetRepository.GetById(id).ToDto();
+        }
+
+        public List<Timesheet> GeTimesheets()
+        {
+            return unitOfWork.TimesheetRepository.GetAll().Select(x=>x.ToDto()).ToList();
+        }
+
+        public void DeleteTimesheet(int id)
+        {
+            var entity = unitOfWork.TimesheetRepository.GetById(id);
+            unitOfWork.TimesheetRepository.Delete(entity);
+            unitOfWork.Commit();
+        }
+
+        public Timesheet UpdateTimesheet(int id, Timesheet timesheet)
+        {
+            var old = unitOfWork.TimesheetRepository.GetById(id);
+            old.StartDay = timesheet.WeekStart;
+            old.EndDay = timesheet.WeekEnd;
+            foreach(var entry in timesheet.Entries.Where(x=>x.Id != null))
+            {
+                    var oldEntry = unitOfWork.TimeEntryRepository.GetById(entry.Id.Value);
+                    oldEntry.Hours = entry.Hours;
+                    if(oldEntry.Project.Id != entry.ProjectId)
+                    {
+                        oldEntry.Project = unitOfWork.ProjectRepository.GetById(entry.ProjectId);
+                    }
+                    if (oldEntry.Task.Id != entry.TaskId)
+                    {
+                        oldEntry.Task = unitOfWork.TaskRepository.GetById(entry.TaskId);
+                    }
+            }
+            old.Entries.AddRange(timesheet.Entries.Where(x => x.Id == null).Select(x => new Entity.TimeEntry()
+            {
+                Date = x.Date,
+                Project = unitOfWork.ProjectRepository.GetById(x.ProjectId),
+                Task = unitOfWork.TaskRepository.GetById(x.TaskId),
+                Hours = x.Hours
+            }));
+            unitOfWork.Commit();
+            return old.ToDto();
+         
         }
     }
 }

@@ -152,10 +152,12 @@ namespace Ftims.Pai.Service
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/timesheet/employee/{id}")]
         [Description("Gets list of timesheets which needs action made by employee")]
+        //TODO
         List<Timesheet> GetTimesheetsNeedAction(string id);
         [OperationContract]
         [WebGet(BodyStyle = WebMessageBodyStyle.Bare, UriTemplate = "/timesheet/{id}/history")]
         [Description("Gets history of timesheet")]
+        //TODO
         List<Audit> GetTimesheetHistory(string id);
         [OperationContract]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/timesheet")]
@@ -164,10 +166,12 @@ namespace Ftims.Pai.Service
         [OperationContract]
         [Description("Accept timesheet")]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/timesheet/{id}/action?type=acceptance")]
+        //TODO
         Timesheet AcceptTimesheet(string id, CreateAudit createAudit);
         [OperationContract]
         [Description("Reject timesheet")]
         [WebInvoke(BodyStyle = WebMessageBodyStyle.Bare, Method = "POST", UriTemplate = "/timesheet/{id}/action?type=rejection")]
+        //TODO
         Timesheet RejectTimesheet(string id, CreateAudit createAudit);
         #endregion TimesheetMethods
     }

@@ -173,7 +173,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of date");
                 return null;
             }
-            return new List<Timesheet>();
+            return businessService.GetEmployeeTimesheets(employeeId, startDate, endDate);
         }
 
         public List<Project> GetManagedProjects(string id)

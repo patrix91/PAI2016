@@ -7,7 +7,7 @@ namespace Ftims.Pai.Service.DTO
     public class Entry
     {
         [DataMember]
-        public int Id { get; set; }
+        public int? Id { get; set; }
         [DataMember]
         public DateTime Date { get; set; }
         [DataMember]

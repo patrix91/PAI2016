@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Ftims.Pai.Service.DTO;
-using Ftims.Pai.Service.Services;
+using Ftims.Pai.Service.BusinessServices;
 using Ftims.Pai.Service.Infrastructure;
 
 namespace Ftims.Pai.Service
@@ -24,7 +24,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return null;
             }
-            return new Timesheet();
+            return null;
         }
 
         public List<Employee> AddSubordinate(string employeeId, string subordinateId)
@@ -269,7 +269,7 @@ namespace Ftims.Pai.Service
                 this.BadRequest("Incorrect format of id");
                 return null;
             }
-            return new Timesheet();
+            return businessService.GetTimesheet(timesheetId);
         }
 
         public List<Audit> GetTimesheetHistory(string id)
@@ -321,7 +321,7 @@ namespace Ftims.Pai.Service
                 return null;
             }
 
-            return new Timesheet();
+            return null;
         }
 
         public void SetProjectManager(string projectId, string employeeId)

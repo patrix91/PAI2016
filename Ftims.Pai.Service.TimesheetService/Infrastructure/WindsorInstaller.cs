@@ -3,7 +3,7 @@ using Castle.MicroKernel.Registration;
 using Castle.MicroKernel.SubSystems.Configuration;
 using Castle.Windsor;
 using Ftims.Pai.Service.DAL;
-using Ftims.Pai.Service.Services;
+using Ftims.Pai.Service.BusinessServices;
 
 namespace Ftims.Pai.Service.Infrastructure
 {

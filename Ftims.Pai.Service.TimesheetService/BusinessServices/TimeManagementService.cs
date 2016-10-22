@@ -4,7 +4,7 @@ using Ftims.Pai.Service.DTO;
 using System.Linq;
 using System;
 
-namespace Ftims.Pai.Service.Services
+namespace Ftims.Pai.Service.BusinessServices
 {
     public class TimeManagementService : ITimeManagementService
     {

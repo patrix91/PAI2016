@@ -130,14 +130,15 @@
     <Compile Include="Infrastructure\WindsorInstaller.cs" />
     <Compile Include="ITimeManagement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\ITimeManagementService.cs" />
-    <Compile Include="Services\TimeManagementService.cs" />
+    <Compile Include="BusinessServices\ITimeManagementService.cs" />
+    <Compile Include="BusinessServices\TimeManagementService.cs" />
     <Compile Include="TimeManagement.svc.cs">
       <DependentUpon>TimeManagement.svc</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Exception\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Ftims.Pai.Service.Services
+namespace Ftims.Pai.Service.BusinessServices
 {
     public interface ITimeManagementService
     {
